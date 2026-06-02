@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>komarinet - シナリオライター</title>
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&family=Shippori+Mincho&display=swap" rel="stylesheet">
+    
+    <style>
+        /* 名刺の余白と配色を再現 */
+        :root {
+            --color-main: #1a1a1a; /* 名刺のK90相当（メインネーム・見出し） */
+            --color-text: #333333; /* 名刺のK80相当（本文・連絡先） */
+            --color-sub: #595959;  /* 名刺のK65相当（肩書・担当箇所） */
+            --font-en: 'Montserrat', sans-serif;
+            --font-ja: 'Shippori Mincho', serif;
+        }
+
+        body {
+            margin: 0;
+            padding: 0;
+            background-color: #ffffff;
+            color: var(--color-text);
+            font-family: var(--font-ja);
+            line-height: 1.8;
+            -webkit-font-smoothing: antialiased; /* 文字をよりシャープに見せる */
+        }
+
+        /* 画面中央に配置（黄金比の余白を意識） */
+        .container {
+            max-width: 600px;
+            margin: 0 auto;
+            padding: 100px 24px;
+        }
+
+        /* ヘッダー周り（アイコン＋名前） */
+        header {
+            text-align: center;
+            margin-bottom: 80px;
+        }
+
+        .icon {
+            width: 140px;
+            height: 140px;
+            border-radius: 50%; /* 画像をきれいな真円に切り抜く */
+            object-fit: cover;
+            margin-bottom: 24px;
+        }
+
+        .job-title {
+            font-size: 0.95rem;
+            color: var(--color-sub);
+            margin: 0 0 4px 0;
+            letter-spacing: 0.1em; /* 少し字間を空けて抜け感を出す */
+        }
+
+        .name {
+            font-family: var(--font-en);
+            font-size: 2.2rem;
+            font-weight: 600;
+            color: var(--color-main);
+            margin: 0;
+            letter-spacing: 0.05em;
+        }
+
+        .sub-name {
+            font-size: 1rem;
+            color: var(--color-sub);
+            font-weight: normal;
+        }
+
+        /* セクション（実績ブロック） */
+        section {
+            margin-bottom: 70px;
+        }
+
+        h2 {
+            font-family: var(--font-en);
+            font-size: 1.2rem;
+            font-weight: 600;
+            color: var(--color-main);
+            border-bottom: 1px solid #eaeaea;
+            padding-bottom: 12px;
+            margin-bottom: 32px;
+            letter-spacing: 0.05em;
+        }
+
+        /* 実績リスト */
+        .work-list {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        .work-item {
+            margin-bottom: 32px;
+        }
+
+        .work-title {
+            font-size: 1.1rem;
+            font-weight: bold;
+            color: var(--color-main);
+            margin: 0 0 6px 0;
+        }
+
+        /* リンクの装飾 */
+        .work-title a {
+            color: inherit;
+            text-decoration: none;
+            border-bottom: 1px solid transparent;
+            transition: border-color 0.3s ease;
+        }
+
+        .work-title a:hover {
+            border-bottom: 1px solid var(--color-main);
+        }
+
+        .work-role {
+            font-size: 0.95rem;
+            color: var(--color-sub);
+            margin: 0;
+        }
+
+        /* 連絡先 */
+        .contact-info {
+            font-family: var(--font-en);
+            color: var(--color-text);
+            font-size: 1rem;
+        }
+        
+        .contact-info p {
+            margin: 4px 0;
+        }
+
+        .contact-info a {
+            color: inherit;
+            text-decoration: none;
+        }
+
+        .contact-info a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <header>
+        <img src="img/icon.webp" alt="komarinet" class="icon">
+        <p class="job-title">シナリオライター</p>
+        <h1 class="name">komarinet <span class="sub-name">（こまりねっと）</span></h1>
+    </header>
+
+    <section id="commercial-works">
+        <h2>Commercial Works</h2>
+        <ul class="work-list">
+            <li class="work-item">
+                <p class="work-title"><a href="https://tapnovel.com/stories/28679" target="_blank" rel="noopener">いわく鑑定士</a></p>
+                <p class="work-role">担当話：〈ひと塗りで記憶できる〉蛍光ペン</p>
+            </li>
+            <li class="work-item">
+                <p class="work-title"><a href="https://tapnovel.com/stories/30581" target="_blank" rel="noopener">BARのふたり</a></p>
+                <p class="work-role">担当話：『最高で最悪なふたり』</p>
+            </li>
+            <li class="work-item">
+                <p class="work-title"><a href="https://tapnovel.com/stories/32800" target="_blank" rel="noopener">告知事項あり</a></p>
+                <p class="work-role">担当話：第二話『変なシゴト、変なニオイ』 / 第三話『科学の使命』</p>
+            </li>
+        </ul>
+    </section>
+
+    <section id="personal-works">
+        <h2>Personal Works</h2>
+        <ul class="work-list">
+            <li class="work-item">
+                <p class="work-title"><a href="https://tapnovel.com/writers/5630" target="_blank" rel="noopener">TapNovel 個人制作シナリオ一覧</a></p>
+                <p class="work-role">個人で執筆した複数章にわたるノベル・シナリオ作品群です。</p>
+            </li>
+        </ul>
+    </section>
+
+    <section id="contact">
+        <h2>Contact</h2>
+        <div class="contact-info">
+            <p>Mail: komarinet@gmail.com</p>
+            <p>X: <a href="https://x.com/lastdrift" target="_blank" rel="noopener">@lastdrift</a></p>
+        </div>
+    </section>
+</div>
+
+</body>
+</html>
